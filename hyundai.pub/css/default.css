@@ -1,0 +1,346 @@
+/* 유앤아이폰트 */
+@font-face{
+	font-family: 'YNI';
+	src: url(tt/fontYouandiModernTR.ttf);
+}
+/* 프리텐다드 웹 폰트 */
+    @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* { margin: 0px; padding: 0px; }
+    html, body { 
+        background: white; 
+        font-family: "YNI" , "Pretendard-Regular" !important;
+        color: black; scroll-behavior: smooth;
+    }
+    p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd { margin:0; padding:0; }
+    ul { list-style:none; }
+    img { vertical-align:top; }
+    a { color: white; text-decoration: none; }
+
+
+/* 레이아웃 */
+#header { width: 100%; background-color: black; }
+#visual { width: 74%; }
+#login { width: 24%;  float: right; border: 2px dashed red;}
+#contents { width: 100%;  }
+#pick_card { width: 100%; }
+#footer { width: 100%; padding-bottom: 10px; border-top: 2px solid black; }
+
+/* header */
+#header .inner { 
+    width: 80%; height: 8vh; 
+    margin: 0 auto;
+    display: flex;
+}
+#header .inner .gnb { 
+    text-align: center; align-items: center;
+    display: flex; justify-content: center;
+    font-size: 18px;
+    width: 70%; }
+#header .inner .gnb li { width: 15%; transition: 0.5s; }
+#header .inner .gnb li:hover { transform: scale(1.1); }
+#header h1 { 
+    text-align: center;
+    width: 15%;  
+     } 
+#header h1 img { margin-top: 6%; }
+
+#header .inner .gnb_s { 
+    text-align: center; align-items: center;
+    display: flex; justify-content: space-between;
+    font-size: 12px;
+    width: 15%; }
+#header .inner .gnb_s li { width: 50%; }
+
+/* 검색 */
+.search_line {  border: 2px dashed black;
+    width: 70%; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+fieldset {
+
+    position: relative;
+    border: 0; 
+    margin: 0 auto; 
+    width: 30%;
+    text-align: center;
+     }
+.blind { position: absolute; top:-9999px; }
+.blind { position: absolute; top:-9999px; }
+
+.search #t1 { 
+    margin-top: 30px; margin-bottom: 30px;
+    width: 400px; height: 50px; 
+    border: 3px solid black; 
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding-left: 15px;
+    
+   
+}
+.search #t2 { 
+    position: absolute; right: 70px; top: 43px;
+    width: 5%;
+}
+
+/* 비쥬얼 */
+#visual .inner {  
+    width: 100%; height: 80vh;
+    margin-left: 10%;
+}
+#visual .inner img { width: 90%; }
+
+/* 로그인 */
+#login .inner { 
+    padding-top: 10px;
+    width: 90%; height: 600px;
+    border: 2px solid black;
+    border-radius: 10%;
+}
+#login .inner .login { height: 20%; }
+#login .inner h2 { 
+     margin-top: 30px; margin-left: 40px;
+     font-size: 36px; }
+#login .inner .login ul { display: flex;}
+#login .inner .login ul .button { 
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 22px; }
+
+#login .inner .login ul li a { color: black; }
+
+.pin-code{ 
+  padding-top: 50px;
+  padding-bottom: 50px;  
+  margin: 0 auto; 
+  display: flex;
+  justify-content:center;
+} 
+ 
+.pin-code input { 
+  border: none; 
+  text-align: center; 
+  width: 24px;
+  height:24px;
+  font-size: 36px; 
+  background-color: #aaaaaa;
+  margin-right:15px;
+  border-radius: 50%;
+} 
+
+.pin-code input:focus { 
+  border: 1px solid #573D8B;
+  outline:none;
+} 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#login .inner .pw { height: 50%; text-align: center;  }
+#login .inner .pw a { color: black; }
+
+.button:hover,
+.button.active,
+.button:visited {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.button {
+  border: 0;
+  background-color: white;
+}
+
+#login .inner .pw p { padding-top: 10px;  }
+#login .inner .pw p:nth-child(4) { font-weight: 600;  }
+#login .inner .pw .span { 
+    font-size: 20px; font-weight: 600;
+    padding: 0px; padding-bottom: 10px;
+}
+#login .inner .pw img { margin-top: 10px; width: 40%; }
+
+
+#login .inner .logo2 { text-align: center;  }
+#login .inner .logo2 img { width: 80%; }
+
+/* contents */
+#contents .inner {  
+    padding-top: 30px;
+    width: 80%; height: 100vh;
+    margin: 0 auto;
+}
+
+/* con_1 */
+
+#contents .con_1 { position: relative; margin-bottom: 80px;}
+#contents .con_2 { position: relative; }
+#contents .con_1 p { 
+    font-size: 48px; 
+    line-height: 40px; 
+}
+#contents .con_1 span { font-size: 16px; margin-left: 5px; }
+#contents .con_1 ul { 
+    width: 80%; margin: 0 auto;
+    margin-top: 30px;
+    justify-content: space-between;
+    display: flex;
+ }
+ #contents .con_1 .more { position: absolute; right: 100px; top: 50px; }
+ #contents .con_1 .more a { color: rgb(41, 44, 233); }
+ #contents .con_1 ul li { text-align: center; }
+ #contents .con_1 ul li p{ 
+    margin-left: 5px; 
+    font-size: 14px;  
+    font-weight: bold;
+ }
+ #contents .con_1 ul li img { transition: 0.5s; }
+ #contents .con_1 ul li img:hover { transform: scale(1.1); }
+
+ /*con_2*/
+ #contents .con_2 p { 
+    font-size: 48px; 
+    line-height: 40px; 
+}
+#contents .con_2 span { font-size: 16px; margin-left: 5px; }
+#contents .con_2 ul { 
+    width: 80%; margin: 0 auto;
+    margin-top: 30px;
+    justify-content: space-between;
+    display: flex;
+ }
+ #contents .con_2 .more { position: absolute; right: 100px; top: 50px; }
+ #contents .con_2 .more a { color: rgb(41, 44, 233); }
+ #contents .con_2 ul li { text-align: center; }
+ #contents .con_2 ul li p{ 
+    margin-left: 5px; 
+    font-size: 14px;  
+    font-weight: bold;
+ }
+ #contents .con_2 ul li img { transition: 0.5s; }
+ #contents .con_2 ul li img:hover { transform: scale(1.1); }
+
+ /* pick_card */
+
+ #pick_card .inner { 
+    width: 80%; height: 100vh;
+    margin: 0 auto; padding-top: 20px;
+    text-align: center; 
+   
+    }
+ #pick_card .inner h2 { 
+    font-size: 48px;
+    line-height: 200px; 
+}
+ #pick_card .inner ul { 
+    width: 40%; margin: 0 auto;
+    display: flex; flex-wrap: wrap;
+    text-align: center; 
+    margin-top: 20px;
+}
+
+#pick_card .button:hover,
+#pick_card .button.active,
+#pick_card .button:visited {
+    font-weight: bold;
+    background-color: skyblue;
+    color: white;
+}
+
+#pick_card .button {
+    padding: 5px; margin: 5px;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.wrap { position: relative;
+    margin: 0 auto;
+    width: 80%; height: 70vh;
+    
+}
+.card {    
+            position: absolute; left: 240px; top: 170px;
+            width: 450px; height: 300px;
+            transform:
+              rotateX(51deg)
+              rotateZ(43deg);
+            transform-style: preserve-3d;
+            border-radius: 32px;
+            box-shadow:
+              1px 1px 0 1px #f9f9fb,
+              -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+              28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+            transition:
+              .4s ease-in-out transform,
+              .4s ease-in-out box-shadow;
+              background: -webkit-linear-gradient(145deg, #4684c1, #343174);
+          }
+.card:hover {
+              transform:
+                translate3d(0px, -16px, 0px)
+                rotateX(51deg)
+                rotateZ(43deg);
+              box-shadow:
+                1px 1px 0 1px #f9f9fb,
+                -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+                54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+            }
+
+/* footer */
+
+#footer .inner {
+     width: 80%; height: 30vh;
+     margin: 0 auto; 
+     display: flex; 
+     padding-top: 20px;
+    }
+#footer .inner .site_map { 
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap; 
+    }
+
+#footer .inner .site_map li { width: 50%; }
+
+#footer .inner .site_map li a { 
+    font-size: 14px;
+    color: black; 
+}
+
+#footer .inner .corp_adress { 
+    width: 30%;
+    padding-top: 175px
+}
+
+#footer .inner .corp_adress li { 
+    width: 100%; 
+    line-height: 30px;
+    font-size: 12px;
+}
+
+#footer .inner .call li { 
+    line-height: 40px; 
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+#footer p { 
+    font-size: 12px; 
+    margin-left: 150px;
+    line-height: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
