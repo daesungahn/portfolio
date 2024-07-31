@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<title>PORTFOLIO</title>
+		<!-- 인트로 애니메이션 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- 이미지슬라이드 swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="css/default.css">
+    <!-- 웹폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- 텍스트 애니메이션 aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script><!-- 이징플러그인 -->
+  </head>
+
+	<body>
+  <script> 
+    AOS.init(); 
+    $(function(){
+      $(".menu").click(function(){//메뉴 클릭했을때
+		  $(this).next().show(); //이 메뉴의 다음 형제인 .pop을 보이게함
+		  $("body").css({ overflow:"hidden" }); //body스크롤 없앰
+		  return false;
+	    });
+
+	    $(".close").click(function(){//close클릭했을때
+		  $(".pop").hide(); //.pop을 안보이게함
+		  $("body").css({ overflow:"auto" }); //body스크롤 생김
+		  return false;
+	    });
+    });
+</script>
+
+<div class="skip_navigation">
+  <a href="#contents">본문바로가기</a>
+  <a href="#footer">하단바로가기</a>
+</div>
+
+
+	<div class="intro">
+			<div class="titles">
+				<div class="title title-1"><h1>WELCOME</h1></div>
+				<div class="title title-2"><h1>TO</h1></div>
+				<div class="title title-3"><h1>MYSITE</h1></div>
+			</div>
+			<ul class="blocks">
+				<li class="block-1 block"></li>
+				<li class="block-2 block"></li>
+			</ul>
+	</div>
+
+
+<div id="header">
+	<div class="inner">
+    <h1 class="blind">주요메뉴</h1>
+    <a href="#" class="gnb_btn" >
+      <img src="img/icon/menu.png" alt="menu">
+    </a>
+		<nav class="gnb">
+			<ul>
+				<li> <a href="#home"> HOME  </a></li>
+				<li> <a href="#works"> WORKS </a> </li>
+				<li> <a href="#about"> ABOUT </a> </li>
+				<li> <a href="#contact"> CONTACT </a> </li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<section id="wrapper">
+
+<div id="home">
+    <div class="inner">
+        <div class="tt">
+            <p class="t1">AHN DAE SUNG </p>
+            <p class="t2"> PORTFOLIO </P>
+            <img class="logo" src="img/bee_logo_white.png" alt="home_circle">
+            <P class="t3">WEB DESIGN &AMP; PUBLISHING </P>
+        </div>
+    </div>    
+</div>
+
+<div id="works" >
+    <div class="sticky">
+      <div data-aos="fade-up"
+           data-aos-offset="120"
+           data-aos-delay="500"
+           data-aos-easing="ease-in-out"
+           data-aos-once="false" 
+      class="sticky-background">
+     <h2> WORKS </h2> 
+      </div>
+      <div class="card-frame">
+<!--                     첫번째                          -->
+        <div class="card c1">
+          <div class="front"> 
+            <img src="img/cording/balen/balen.png" alt="balenciaga_logo"> 
+          </div>
+            <div class="ho"> 
+              <p class="p1"> coding </p>
+              <p class="p2"> 
+                발렌시아가 웹사이트 <br> 
+                리디자인 코딩 작업  <br>
+                기여도 100% 개인작업 </p> 
+            </div>
+        </div>
+        <div class="pop balen">
+          <div class="pop_visual">
+              <p class="pop_title">'Balenciaga'<br><span>Web/Mobile Design & Coding</span></p>
+          </div>
+          <div class="pop_inner">
+              <div class="type">
+                  <h5>Type</h5>
+                  <div class="line"></div>
+                  <p>Web Design</p>
+                  <p>Mobile Web Design</p>
+                  <p>Web Coding</p>
+              </div>
+              <div class="color">
+                  <h5>Color</h5>
+                  <div class="line"></div>
+                  <div class="color1"></div>
+                  <p>#0c0c0c</p>      
+                  <div class="color2"></div>
+                  <p>#e4e4e4</p>      	                      			                		
+              </div>
+              <div class="font">
+                  <h5>Font</h5>
+                  <div class="line"></div>
+                  <p>Utah Condensed Bold</p>
+                  <p>Noto Sans KR</p>                      			
+              </div>
+              <div class="tools">
+                  <h5>Tools</h5>
+                  <div class="line"></div>
+                  <p>Photoshop</p>
+                  <p>HTML/CSS</p>
+                  <p>javascript</p>
+              </div>			
+              <p class="ex">패션 명품 브랜드 '발렌시아가' 웹사이트 & 모바일 웹사이트 시안입니다.<br>
+              트렌디하고, 화려한 브랜드 이미지에 맞춰 동적인 요소를 적용하고, 
+              브랜드 로고와 맞춰 블랙엔 화이트로 깔끔한 컬러매치를 하였습니다.<br>
+              컨텐츠 영역은 자바스크립트를 이용하여 핵심 제품들을 배치하였습니다.</p>             
+          </div>
+          <div class="mockup">               	
+              <div class="sc1"><img src="img/balen_mu.png" alt="발렌시아가 웹사이트 가상 스크린 이미지"></div>
+              <a href="balen_pub/index.html" target="_blank">
+                <div class="quick">
+                  <p>웹페이지 바로가기</p>
+                </div>
+              </a>
+          </div>
+              <a href="#" class="close"><img src="img/close.gif" alt="팝업창 닫기 버튼"></a>
+      </div>  
+  <!--                     두번째                          -->
+      <div class="card c2">
+          <div class="front"> <img src="img/cording/nice/nice.png" alt="niceweather"></div>
+          <div class="ho"> 
+            <p class="p1"> coding </p>
+            <p class="p2"> 
+              나이스웨더 웹사이트 <br> 
+              리디자인 코딩 작업  <br>
+              기여도 100% 개인작업 </p> 
+          </div> 
+      </div>
+      <div class="pop nice">
+          <div class="pop_visual">
+              <p class="pop_title">'Niceweather'<br><span>Web/Mobile Design & Coding</span></p>
+          </div>
+          <div class="pop_inner">
+              <div class="type">
+                <h5>Type</h5>
+                  <div class="line"></div>
+                  <p>Web Design</p>
+                   <p>Mobile Web Design</p>
+                  <p>Web Coding</p>
+              </div>
+              <div class="color">
+                  <h5>Color</h5>
+                  <div class="line"></div>
+                  <div class="color1"></div>
+                  <p>#050DB1</p>      
+     	                      			                		
+              </div>
+              <div class="font">
+                  <h5>Font</h5>
+                  <div class="line"></div>
+                  <p>Roboto</p>
+                  <p>Noto Sans KR</p>                      			
+              </div>
+              <div class="tools">
+                  <h5>Tools</h5>
+                  <div class="line"></div>
+                  <p>Photoshop</p>
+                  <p>HTML/CSS</p>
+                  <p>javascript</p>
+              </div>			
+              <p class="ex">트렌디 편집샵 '나이스웨더' 웹사이트 & 모바일 웹사이트 시안입니다.<br>
+              브랜드가 가진 컬러매치를 살리기위해 #050DB1 를 사용했습니다. 
+              심플한 메인 페이지를 위해 폴더식 슬라이드 효과를 적용하고,<br>
+              이벤트영역을 배치하여 프로모션에도 용이하게 배치하였습니다.</p>
+          </div>
+          <div class="mockup">              
+            <div class="sc1"><img src="img/nice_mu.png" alt="나이스웨더 웹사이트 가상 스크린 이미지"></div>  	
+            <a href="nice_pub/index01.html" target="_blank"><div class="quick"><p>웹페이지 바로가기</p>
+            </div></a>             
+          </div>
+            <a href="#" class="close"><img src="img/close.gif" alt="팝업창 닫기 버튼"></a>
+      </div> 
+<!--                     세번째                          -->
+        <div class="card c3">
+          <div class="front"> <img src="img/cording/non/non.png" alt="nonfiction"> </div>
+          <div class="ho"> 
+            <p class="p1"> coding </p>
+              <p class="p2"> 
+                논픽션 웹사이트 <br> 
+                리디자인 코딩 작업  <br>
+                기여도 100% 개인작업 </p> 
+          </div> 
+        </div>
+        <div class="pop non">
+          <div class="pop_visual">
+              <p class="pop_title">'Nonfiction'<br><span>Web/Mobile Design & Coding</span></p>
+          </div>
+          <div class="pop_inner">
+              <div class="type">
+                <h5>Type</h5>
+                  <div class="line"></div>
+                  <p>Web Design</p>
+                   <p>Mobile Web Design</p>
+                  <p>Web Coding</p>
+              </div>
+              <div class="color">
+                  <h5>Color</h5>
+                  <div class="line"></div>
+                  <div class="color1"></div>
+                  <p>#000000</p>
+		                		
+              </div>
+              <div class="font">
+                  <h5>Font</h5>
+                  <div class="line"></div>
+                  <p>Noto Sans KR</p>                      			
+              </div>
+              <div class="tools">
+                  <h5>Tools</h5>
+                  <div class="line"></div>
+                  <p>Photoshop</p>
+                  <p>HTML/CSS</p>
+                  <p>javascript</p>
+                  <p>jQuery</p>
+              </div>			
+              <p class="ex"> 라이플스타일 뷰티 브랜드'논픽션' 웹사이트 & 모바일 웹사이트 시안입니다.<br>
+              심플함을 위해 단순한 구조의 레이아웃을 적용하였습니다. 
+              심심해질것을 감안하여 버튼에는 다이나믹한 효과를 사용했고,<br>
+              판매촉진을 위한 판매 콘텐츠를 많이 배치하였습니다.</p>
+          </div>
+          <div class="mockup">
+            <div class="sc1"><img src="img/non_mu.png" alt="논픽션 웹사이트 가상 스크린 이미지"></div>
+            <a href="non_pub/index.html" target="_blank"><div class="quick"><p>웹페이지 바로가기</p>
+            </div></a>            
+          </div>
+            <a href="#" class="close"><img src="img/close.gif" alt="팝업창 닫기 버튼"></a>
+        </div>
+<!--                     네번째                          -->
+        <div class="card c4">
+          <div class="front"> <img src="img/logo/hnm.png" alt="movement"> </div>
+              <div class="ho"> 
+                <p class="p1"> design </p>
+                <p class="p2"> 
+                  H&M 웹사이트 <br> 
+                  리디자인 작업  <br>
+                  기여도 100% 개인작업 </p> 
+          </div> 
+        </div>
+        <div class="pop hnm">
+          <div class="pop_visual">
+              <p class="pop_title">'H&#38;M'<br><span>Design</span></p>
+          </div>
+          <div class="pop_inner">
+              <div class="type">
+                <h5>Type</h5>
+                  <div class="line"></div>
+                  <p>Web Design</p>
+              </div>
+              <div class="color">
+                  <h5>Color</h5>
+                  <div class="line"></div>
+                  <div class="color1"></div>
+                  <p>#ffffff</p>
+              </div>
+              <div class="font">
+                  <h5>Font</h5>
+                  <div class="line"></div>
+                  <p>Noto Sans KR</p>
+                  <p>Garamond</p>                       			
+              </div>	
+              <p class="ex"> 패션 브랜드'H&#38;M' 웹사이트 시안입니다.<br>
+              친근함이 느껴지도록 기본적인 구조의 레이아웃을 적용하였습니다.<br>
+              트렌드에 맞춰 큰 이미지를 활용하였습니다.</p>
+          </div>
+          <div class="page">
+              <div class="sc1"><img src="img/design/hnm/H&M.jpg" alt="에이치앤앰 웹사이트 가상 스크린 이미지"></div>
+              <div class="sc2"><img src="img/design/hnm/H&M_sub.jpg" alt="에이치앤앰 웹사이트 가상 스크린 이미지"></div>
+              <div class="sc3"><img src="img/design/hnm/H&M_sub-2.jpg" alt="에이치앤앰 웹사이트 가상 스크린 이미지"></div>                
+          </div>
+            <a href="#" class="close"><img src="img/close.gif" alt="팝업창 닫기 버튼"></a>
+        </div>
+<!--                     다섯번째                          -->
+        <div class="card c5">
+          <div class="front"> <img src="img/logo/magazine_b_logo.png" alt="magazine_b_logo"> </div>
+              <div class="ho"> 
+                <p class="p1"> design </p>
+                <p class="p2"> 
+                  매거진 B 웹사이트 <br> 
+                  리디자인 작업  <br>
+                  기여도 100% 개인작업 </p> 
+          </div> 
+        </div>
+        <div class="pop bma">
+          <div class="pop_visual">
+              <p class="pop_title">'magazine B'<br><span>Design</span></p>
+          </div>
+          <div class="pop_inner">
+              <div class="type">
+                <h5>Type</h5>
+                  <div class="line"></div>
+                  <p>Web Design</p>
+              </div>
+              <div class="color">
+                  <h5>Color</h5>
+                  <div class="line"></div>
+                  <div class="color1"></div>
+                  <p>#ffffff</p>
+                  <div class="color2"></div>
+                  <p>#000000</p>
+              </div>
+              <div class="font">
+                  <h5>Font</h5>
+                  <div class="line"></div>
+                  <p>Noto Sans KR</p>
+                  <p>Roboto</p>                        			
+              </div>	
+              <p class="ex"> '매거진 B' 웹사이트 시안입니다.<br>
+              색채를 많이 이용하는 브랜드 특성을 살려, 목록들의 색채를 다양하게 적용하고,<br>
+              트렌디하고, 유니크한 레이아웃을 적용하였습니다.<br>
+              텍스트들을 타이포그라피느낌으로 배치하였습니다. </p>
+          </div>
+          <div class="page">
+              <div class="sc1"><img src="img/design/bmagazine/b_main.png" alt="비매거진 웹사이트 가상 스크린 이미지"></div>
+              <div class="sc2"><img src="img/design/bmagazine/b_sub.png" alt="비매거진 웹사이트 가상 스크린 이미지"></div> 
+              <div class="sc3"><img src="img/design/bmagazine/b_sub2.png" alt="비매거진 웹사이트 가상 스크린 이미지"></div>                 
+          </div>
+            <a href="#" class="close"><img src="img/close.gif" alt="팝업창 닫기 버튼"></a>
+        </div> 
+
+
+        <div class="card c6">
+          <div class="front"> <img src="img/logo/kinto_logo.png" alt="킨토 로고이미지"> </div>
+              <div class="ho"> 
+                <p class="p1"> design </p>
+                <p class="p2"> 
+                  킨토 웹사이트 <br> 
+                  리디자인 작업  <br>
+                  기여도 100% 개인작업 </p> 
+          </div> 
+        </div>
+        <div class="pop kinto">
+          <div class="pop_visual">
+              <p class="pop_title">'KINTO'<br><span>Design</span></p>
+          </div>
+          <div class="pop_inner">
+              <div class="type">
+                <h5>Type</h5>
+                  <div class="line"></div>
+                  <p>Web Design</p>
+              </div>
+              <div class="color">
+                  <h5>Color</h5>
+                  <div class="line"></div>
+                  <div class="color1"></div>
+                  <p>#ffffff</p>
+                  <div class="color2"></div>
+                  <p>#111111</p>
+              </div>
+              <div class="font">
+                  <h5>Font</h5>
+                  <div class="line"></div>
+                  <p>Noto Sans KR</p>   
+                  <p>Helvetica</p>                      			
+              </div>	
+              <p class="ex"> '킨토' 웹사이트 시안입니다.<br>
+              보다 직관적인 비쥬얼 영역을 설정하고,<br>
+              모바일 환경으로 변경이 용이한 레이아웃을 사용했습니다.<br>
+              폰트를 얇게 사용하여 더 깔끔해 보이도록 했습니다. </p>
+          </div>
+          <div class="page">
+              <div class="sc1"><img src="img/design/kinto/main.png" alt="킨토 웹사이트 가상 스크린 이미지"></div>
+              <div class="sc2"><img src="img/design/kinto/main2.png" alt="킨토 웹사이트 가상 스크린 이미지"></div> 
+              <div class="sc3"><img src="img/design/kinto/sub.png" alt="킨토 웹사이트 가상 스크린 이미지"></div>                
+          </div>
+            <a href="#" class="close"><img src="img/close.gif" alt="팝업창 닫기 버튼"></a>
+        </div> 
+      </div>
+    </div>
+</div>
+
+<div id="design" >
+  <div class="inner">
+    <h2> DESIGN </h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">  
+          <img src="img/etc/etc_1.png" alt="etc작품1">  
+          <div class="ho2"> <a href="img/etc/etc_1.png" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+        </div>
+        <div class="swiper-slide"> 
+          <img src="img/etc/etc_2.png" alt="etc작품2">  
+          <div class="ho2"> <a href="img/etc/etc_2.png" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+        </div>
+        <div class="swiper-slide">
+           <img src="img/etc/etc_3.jpg" alt="etc작품3"> 
+           <div class="ho2"> <a href="img/etc/etc_3.jpg" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+          </div>
+        <div class="swiper-slide"> 
+          <img src="img/etc/etc_4.png" alt="etc작품4">
+          <div class="ho2"> <a href="img/etc/etc_4.png" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+        </div>
+        <div class="swiper-slide"> 
+          <img src="img/etc/etc_5.jpg" alt="etc작품5"> 
+          <div class="ho2"> <a href="img/etc/etc_5.jpg" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+        </div>
+        <div class="swiper-slide">
+           <img src="img/etc/etc_6.png" alt="etc작품6"> 
+           <div class="ho2"> <a href="img/etc/etc_6.png" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/etc/etc_7.png" alt="etc작품7"> 
+          <div class="ho2"> <a href="img/etc/etc_7.png" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+       </div>
+       <div class="swiper-slide">
+        <img src="img/etc/etc_8.png" alt="etc작품8"> 
+        <div class="ho2"> <a href="img/etc/etc_8.png" onclick="window.open(this.href,'팝업창',width=800,height=800);return false;"> 크게보기 </a> </div>
+     </div>
+
+      </div>
+      <div class="btn swiper-button-next"></div>
+      <div class="btn swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+<div id="about">
+  
+  <div class="inner">
+    <h2> ABOUT </h2>
+    
+
+    <div class="text"> 
+      <div class="photo"> <img src="img/profile.png" alt="profile_image"> </div>
+      <dl>
+        <dt>NAME</dt>
+        <dd>안대성</dd>
+        <dt>BIRTH</dt>
+        <dd>1993.03.26</dd>
+        <dt>RESIDENCE</dt>
+        <dd>서울 용산</dd>
+        <dt>MAJOR</dt>
+        <dd>스포츠경영학</dd>
+        <dt>FAVORITE</dt>
+        <dd> 음악 운동  그림 사진 카페투어</dd>
+      </dl>
+      <dl class="dl2">
+        <dt>EDU</dt>
+        <dd>종로 이젠 컴퓨터학원 <br> UIUX 웹 퍼블리싱 프론트엔드 과정 수료 </dd>
+        <dt>&nbsp;</dt>
+        <dd>&nbsp;</dd>
+        <dt>SKILLS</dt>
+        <dd>HTML <br> CSS<br>JQUERY <br> JAVASCRIPT<br>VUE.JS <br> REACT<br><br>PHOTOSHOP<br>ILLUSTRATOR<br>FIGMA </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<div id="contact">
+  <h2> CONTACT </h2>
+  <div class="inner">
+    <dl>
+      <dt>PHONE</dt>
+      <dd>01093761636</dd>
+      <dt>E-mail</dt>
+      <dd>zxzxv12@NAVER.COM</dd>
+      <dt>SNS</dt>
+      <dd>&#64;big._.star</dd>
+    </dl>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="inner">
+  <p> &copy; 2024 ads Allrightreserved </p>
+  </div>
+</div>
+
+
+<div class="quick_menu">
+  <ul>
+      <li> <a href="#home"> HOME  </a> </li>
+      <li> <a href="#works"> WORKS </a> </li>
+      <li> <a href="#about"> ABOUT </a> </li>
+      <li> <a href="#contact"> CONTACT </a> </li>
+  </ul>
+</div>
+
+
+ </section>
+		<script src="js/default.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+	</body>
+</html>
+

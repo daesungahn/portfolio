@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+@font-face{
+    font-family: 'Balen';
+    src: url(Balenciaga/Font/Utah\ Condensed\ Bold.ttf);
+    }
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    background-color: #232323;
+}
+ul { list-style: none; }
+  p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd { margin:0; padding:0; }
+  img { vertical-align:top; }
+  a { text-decoration: none; color: #f5f5f5; }
+
+/* header */
+#header { width: 100vw; opacity: 1; }
+#header { 
+  position: fixed; left: 0; top: 0; z-index: 1;
+  background-color: rgba(1,1,1,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 7px 15px 8px rgba(0,0,0,0.3);
+}
+#header .inner {
+  width: 95%; height: 8vh;
+  margin: 0 auto;
+  align-items: center; display: flex; justify-content: center;
+}
+#header .menuToggle { 
+display: block; 
+position: relative;
+top: 0px;
+left: 20px;
+
+z-index: 1;
+
+-webkit-user-select: none;
+user-select: none;
+width: 10%;
+}
+
+#header .menuToggle a { 
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+
+}
+
+.menuToggle input 
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+.menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #a1a1a1;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+.menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+.menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+
+.menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+.menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu
+{
+  position: absolute; left: -50px; top: 60px;
+  width: 400px; height: 800px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 150px;
+  
+  background: #a1a1a1;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.menu li
+{
+  padding: 10px 0;
+  margin-left: 20px;
+  font-size: 22px;
+  font-family: 'Balen';
+}
+.menu li:hover { border-bottom: 1px solid black; }
+
+.menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+#header h1 { width: 80%; text-align: center; margin: 0 auto; }
+#header h1 img { min-width: 15%; padding: 20px; filter: invert(1); }
+
+#header .inner .gnb {  width: 10%;}
+#header .inner .gnb ul { display: flex; float: right;}
+#header .inner .gnb ul li {line-height: 5vh; padding: 10px; font-size: 1.1rem; }
+#header .inner .gnb ul li a { color: #a1a1a1; transition: 0.5s; display: block;}
+#header .inner .gnb ul li a:hover { color: #fff; }
+
+.container { 
+    width: 100%; height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper{ 
+    width: 600px;
+    height: 550px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.login-wrapper > h2{
+    font-size: 48px;
+    color: #a1a1a1;
+    margin-bottom: 60px;
+    font-family: 'Balen';
+}
+#login-form > input{
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 6%;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+}
+
+#login-form a { color: #a1a1a1; margin-left: 240px; font-size: 14px; }
+
+#login-form > input::placeholder{
+    color: #D2D2D2;
+}
+#login-form > input[type="submit"]{
+    color: #fff;
+    font-size: 16px;
+    background-color: #a1a1a1;
+    margin-top: 40px;
+    font-family: 'Balen';
+    cursor: pointer;
+}
+#login-form > input[type="submit"]:hover{ background-color: #333333; }
+
+#login-form > input[type="checkbox"]{
+    display: none;
+}
+#login-form > label{
+    color: #999999;
+}
+#login-form input[type="checkbox"] + label{
+    cursor: pointer;
+    padding-left: 26px;
+    background-image: url("checkbox.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#login-form input[type="checkbox"]:checked + label{
+    background-image: url("checkbox-active.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* footer */
+#footer { width: 100vw; background-color: #a1a1a1; }
+#footer .inner { background-color: #a1a1a1; width: 100%; height: 100%; padding-bottom: 100px; }
+#footer .inner .sitemap { 
+display: flex; justify-content: space-between;
+border-bottom:1px solid black ;
+}
+#footer .inner .sitemap ul { width: 15%; margin: 15px;}
+.inner .sitemap ul li { font-size: .9rem; line-height: 1.7rem; letter-spacing: .1rem; }
+#footer .inner .sitemap ul li a { color: black; }
+#footer .inner .sitemap ul li a:hover { text-decoration: underline; }
+
+#footer .inner .sitemap ul .ti { padding-bottom: 10px; } 
+#footer .inner .info { margin: 0 auto; padding: 20px; width: 60%; text-align: center; font-size: .8rem; }
+#footer .inner .copy { 
+width: 100%;
+text-align: center;  
+border-top: 1px solid black;}
+#footer .inner .copy p { line-height: 12vh; }
+
+@media ( width < 767px) {
+
+
+  .headline { 
+    font-size: 2rem;
+  }
+  
+  .desc {
+    font-size: 1rem;
+  }
+
+  #footer .inner { padding-bottom: 0px; }
+  #footer .inner .sitemap { display: none; }
+  #footer .inner .info { margin: 0 auto; padding: 10px; width: 90%; text-align: center; font-size: .8rem; }
+  #footer .inner .copy p { line-height: 5rem; }
+
+}
+
+</style>
+<body>
+
+    <header id="header">
+        <div class="inner">
+            <div class="menuToggle"> 
+              <input type="checkbox">
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul class="menu open">
+                <a href="index_1.html"><li>HOME</li></a>
+                <a href="#"><li>NEW</li></a>
+                <a href="#"><li>WOMEN</li></a>
+                <a href="#"><li>MEN</li></a>
+                <a href="#"><li>COMTENTS</li></a>
+              </ul>
+            </div>     
+            <h1 class="logo"><a href="index_1.html"><img src="image/Balenciaga-2017-Logo.svg" alt="BALENCIAGA"> </a>  </h1>
+            <nav class="gnb">
+                <ul>
+                  <li> <a href="login.html"> LOGIN </a> </li>
+                  <li> <a href=""> CART </a> </li>
+                </ul>
+            </nav>
+        </div>
+  </header>
+
+<div class="container">
+    <div class="login-wrapper">
+        <h2>Login</h2>
+        <form method="post" action="http://127.0.0.1:5500/login.html#" id="login-form">
+            <input type="text" name="userName" placeholder="Email">
+            <input type="password" name="userPassword" placeholder="Password">
+            <label for="remember-check">
+                <input type="checkbox" id="remember-check"> 아이디 저장하기
+            </label>
+            <a href="#"> 아이디/비밀번호 찾기 </a>
+            <input type="submit" value="로그인">
+        </form>
+    </div>
+</div>
+    
+    <div id="footer">
+        <div class="inner">
+          <div class="sitemap">
+            
+            <ul class="news">
+              <li class="ti"> 뉴스레터 </li>
+              <li> <a href=""> 뉴스레터 구독 </a> </li>
+            </ul>
+    
+            <ul class="cu">
+              <li class="ti"> 고객서비스 </li>
+              <li> <a href=""> 주문 추적 </a> </li>
+              <li> <a href=""> 반품 </a> </li>
+              <li> <a href=""> 배송 </a> </li>
+              <li> <a href=""> 결제 </a> </li>
+              <li> <a href=""> FAQ </a> </li>
+            </ul>
+            
+            <ul class="op">
+              <li class="ti"> 회사 </li>
+              <li> <a href=""> 채용 정보 </a> </li>
+              <li> <a href=""> 법적 고지 </a> </li>
+              <li> <a href=""> 개인 정보 취급 방침 </a> </li>
+              <li> <a href=""> 쿠키 설정 </a> </li>
+              <li> <a href=""> 월드 푸드 프로그램 </a> </li>
+              <li> <a href=""> 서비스 가입사실 확인 </a> </li>
+            </ul>
+    
+            <ul class="so">
+              <li class="ti"> 소셜미디어 </li>
+              <li> <a href=""> KakaoTalk </a> </li>
+              <li> <a href=""> Instagram </a> </li>
+              <li> <a href=""> Facebook </a> </li>
+              <li> <a href=""> Tiktok </a> </li>
+              <li> <a href=""> Spotify </a> </li>
+            </ul>
+            <ul class="bo">
+              <li class="ti"> 부티크 </li>
+              <li> <a href=""> 가까운 부티크 찾기 </a> </li>
+              <li> <a href=""> 국가 / 지역 : 대한민국 </a> </li>
+              <li> <a href=""> 언어 : 한국 </a> </li>
+            </ul>
+            <ul class="su">
+              <li class="ti"> 문의하기 </li>
+              <li> 월요일 ~ 토요일 <br> 10:00am ~ 09:00pm  </li>
+              <li> <a href=""> 라이브채팅 </a> <br> 현재이용가능  </li>
+              <li> 전화 <br> <a href=""> +82 261 05 21 88 </a> </li>
+              <li> <a href=""> 이메일 </a> </li>
+            </ul>
+          </div>
+          <div class="info"> 
+            <p>
+            회사명: 발렌시아가코리아 유한책임회사 | 사업자등록번호: 211-88-83220 <br>
+            대표자: 브누아프랑수아조셉자크방트 | 주소: 서울특별시 강남구 도산대로 458, 13,14층(청담동, 도산 458빌딩) | <br>
+             법적 고지 통신판매신고번호: 2022-서울강남-06711 | 통신판매업신고기관: 서울특별시 강남구청 | 호스팅 서비스: Salesforce Commerce Cloud <br>
+            고객센터: 02-6105-2188 | 이메일: clientservice.kr@balenciaga.com
+            개인정보보호책임 : 발렌시아가코리아 유한책임회사 이커머스팀 | 대표번호:02-542-1937
+            </p> 
+          </div>
+          <div class="copy"> <p> &copy; 2024 Balenciaga </p> </div>
+        </div>
+      </div>
+
+
+      <script>
+        const login = document.querySelector('#login-form > input[type="submit"]');
+
+        login.addEventListener("click",function(){
+            alert('회원가입 후 이용해주세요.')
+        })
+
+      </script>
+</body>
+</html>

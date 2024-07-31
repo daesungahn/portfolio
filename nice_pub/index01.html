@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niceweather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+      
+      * { margin: 0px; padding: 0px; }
+      html,body { height:100%; }
+      body,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd { margin:0; padding:0; }
+      h1,h2,h3,h4,h5,h6 { font-size:12px; }
+      ul { list-style:none; }
+      img { vertical-align:top; }
+      a { text-decoration: none; color: black;}
+      
+      
+      html, body { 
+        font-family: 'Roboto','Noto Sans KR'; 
+        background-color: #fafafa; 
+      }
+      
+      .blind { position:absolute; top: -9999px; }
+      
+      /* header */
+      
+      #header {
+        position: fixed;
+        z-index: 1;
+        background-color: #FFF;
+        top: 0;
+        width: 100%;
+        height: 6vh;
+        border-bottom: 1px solid #00178f;
+        display: flex;
+        align-items: center;
+        font-size: 2vh; }
+      
+      
+      #header .inner { 
+        width: 100%;
+        margin: 0 auto; }
+      
+      #header h1 img { width: 8vw; margin-left: 50px; }
+      
+      #header .gnb ul { 
+        position: absolute; right: 50px; bottom: 10px;
+        display: flex; 
+        align-items: center;
+      }
+      #header .gnb ul li { 
+        width: 25%;
+        margin-right: 20px; }
+      
+      #header .gnb ul li img { width: 80%; }
+      
+      #header .gnb ul li:nth-child(4) { 
+        margin-left: 30px;
+        margin-right: 0px;
+        width: 35%; }
+      
+        #header .menu_pop {
+          transition: 0.5s;
+          width: 100%; height: 0vh; 
+          overflow: hidden;
+          background-color: white;
+          position: fixed; left: 0;
+        }
+        #header .menu_pop .pop_t { align-items: center;  padding-top: 30px;  }
+        #header .menu_pop .pop_t li { 
+          text-align: center;
+          margin: 0 auto; 
+          width: 20%; line-height: 6vh;  
+          font-size: 1.5rem; font-weight: 600; }
+        #header .menu_pop .pop_t li a { display: block; }
+        #header .menu_pop .pop_t li a:hover { background-color: #00178f; color: #FAFAFA; }
+        #header .menu_pop .pop_i { 
+          width: 80%; 
+          margin: 0 auto; padding-top: 100px; 
+          justify-content: space-between; display: flex; 
+        } 
+        #header .menu_pop .pop_i li { width: 93px; height: 93px;}
+        #header .menu_pop .pop_i li img { width: 100%; }
+        #header .menu_pop .close { margin: 30px; float: right; }
+      
+      /*visual*/
+      
+      #visual {
+        padding-top: 6vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+      
+      #visual .inner { width: 100%; height: 100vh; }
+      #visual .inner img { width: 100%; }
+      
+      
+      /*  contents */
+      .main-content-1 { 
+        background-color: #fafafa;
+        border-top: 1px solid #00178f;
+        border-bottom: 1px solid #00178f;
+        width: 100%;
+        height: 500vh;
+        margin-bottom: 100vh;
+      }
+      
+      .sticky-title { /* 추후 자동갤러리를 이용한 공백채우기 */
+      
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 9vh;
+        display: flex;
+      }
+      .sticky-title .inner { 
+        text-align: center;
+        width: 100%; 
+        margin: 0 auto;
+      }
+      
+      .sticky { 
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      .section {   
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #FAFAFA;
+      }
+      
+      .title {
+        border-top: 1px solid #00178f;
+        background-color: #FFF;
+        height: 6vh;
+        display: flex;
+        align-items: center;
+        font-size: 2vh;
+        padding-left: 3vh;
+      }
+      
+      .content { width: 100%;  }
+      .content span { font-size: 62px; font-weight: 700;}
+      
+      .section-1 > .content img{ float: right; width: 68%; }
+      .section-1 > .content p{ 
+        position: absolute; left: 50px; bottom: 25%;
+        color: #00178f; font-size: 2rem; line-height: 65px;
+        }
+      .section-2 > .content img{ float: left; width: 50%; }
+      .section-2 .content .text_box { position: relative; height: 100%; }
+      .section-2 > .content strong {
+        color: #161616; font-weight: 700; font-size: 6rem;
+        position: absolute; top: 5%;
+      
+        }
+      .section-2 > .content .p2 {  
+        position: absolute; right: 2%; bottom: 5%;
+        color: #00178f; font-size: 2rem; line-height: 65px;
+        text-align: right;
+      }
+      .section-2 > .content .p2 span { font-size: 3rem; }
+      
+      .section-3 .inner { width: 100%; height: 30%; }
+      .section-3 .inner ul { display: flex; flex-wrap: wrap; }
+      .section-3 .inner ul li { width: 50%; height: 50%;}
+      .section-3 .inner ul li img { width: 100%;}
+      
+      /*footer*/
+      
+      
+      .footer .content ul {
+        width: 100%; 
+        display: flex; flex-wrap: wrap; 
+        margin-top: 50px; 
+        }
+      .footer .content ul li {  
+        width: 33%; height: 150px;
+       }
+      .footer .content ul a {
+        color: #00178f; 
+        font-size: 36px;
+        padding-left: 10px;
+      }
+      .footer .content P {
+         font-size: 12px; font-weight: bold; 
+         position: absolute; left: 10px; bottom: 280px; }
+      .footer .content P:nth-child(2) { bottom: 300px; }
+      
+      @media all and (max-width:767px) { /* 스마트폰 */
+
+        #header .inner { 
+        width: 100%; margin: 0 auto; }
+        #header h1 img { width: 25%;  }
+        #header .gnb ul { right: 10px; top: 10px; }
+        #header .gnb ul li { 
+        width: 25%;
+        margin-right: 10px; }
+        #header .gnb ul li:nth-child(4) { 
+        margin-left: 10px;
+        margin-right: 0px;
+        margin-top: 2px;
+        width: 35%; }
+
+        #header .menu_pop .pop_t li { 
+          margin: 0 auto; 
+          width: 70%; line-height: 5vh;  
+          font-size: 1.5rem; font-weight: 600;
+         }
+        #header .menu_pop .pop_i { display: flex; flex-wrap: wrap; }
+
+      
+        #visual .inner { height: 25vh; }
+
+   
+        .sticky-title .inner {  height: 600px; }
+        .sticky-title .inner img { height: 100%; }
+        .main-content-1 .inner img { width: 100%;}
+
+        .section-1 > .content p{ 
+          bottom: 35%; }
+      
+        .section .content img { width: 100%; }
+        .main-content-1 .section-3 .inner li { width: 50%; height: 350px; }
+        .main-content-1 .section-3 .inner li img { width: 100%; height: 350px; }
+      
+        .footer .content ul li { width: 50%; }
+        .footer .content ul a { 
+          color: #00178f; 
+          font-size: 1.5rem;
+          padding: 10px; }
+      
+      }
+      
+      
+      </style>
+      
+
+  </head>
+
+
+<body>
+
+<header id="header">
+  <div class="inner">
+    <h1 class="logo"> <a href="#"> <img src="image/Untitled-3.jpg" alt="niceweather"> </a> </h1>
+    <h2 class="blind">주요메뉴</h2>
+    <nav class="gnb">
+        <ul>
+            <li> <a href="#"> <img src="image/search.jpg" alt="검색"> </a> </li>
+            <li> <a href="#"> <img src="image/cart.jpg" alt="장바구니"> </a> </li>
+            <li> <a href="#"> <img src="image/profile.jpg" alt="프로필"> </a> </li>
+            <li class="menu_btn"> <a href="#"> <img src="image/menu.jpg" alt="햄버거"> </a> </li>
+        </ul>
+    </nav>
+    <div class="menu_pop">
+      <div class="close"><a href=""> <img src="image/close.png" alt="close_button"> </a> </div>
+      <ul class="pop_t">
+        <li><a href=""> NEW IN </a></li>
+        <li><a href=""> TOP 50 </a></li>
+        <li><a href=""> MUST HAVE </a></li>
+        <li><a href=""> NICEWEATHER GOODS </a></li>
+        <li><a href=""> FASHION </a></li>
+        <li><a href=""> LIFE STYLE </a></li>
+        <li><a href=""> FOOD </a></li>
+        <li><a href=""> BRAND SALE </a></li>
+        <li><a href=""> COLLABORATION </a></li>
+      </ul>
+      <ul class="pop_i">
+        <li><a href=""> <img src="image/sircle.png" alt="동그라미"> </a></li>
+        <li><a href=""> <img src="image/vivien.png" alt="비비앙"> </a></li>
+        <li><a href=""> <img src="image/HOUSE.png" alt="하우스오브델리"> </a></li>
+        <li><a href=""> <img src="image/cosmos.png" alt="코스모스스튜디오"> </a></li>
+        <li><a href=""> <img src="image/FUNK.png" alt="펑크"> </a></li>
+        <li><a href=""> <img src="image/punch.png" alt="복싱"> </a></li>
+        <li><a href=""> <img src="image/jayass.png" alt="제이애스"> </a></li>
+        <li><a href=""> <img src="image/FAD.png" alt="패드"> </a></li>
+        <li><a href=""> <img src="image/nice.jpg" alt="나이스웨더"> </a></li>
+      </ul>
+      
+    </div>
+  </div>
+</header>
+
+<div id="visual">
+  <div class="inner">
+  <a href="#"> <img src="image/visual1.jpg" alt="visual_image"> </a>
+  </div>
+</div>
+
+
+<div class="main-content-1">
+  <div class="sticky">
+    <div class="sticky-title">
+      <div class="inner">
+        <a href="#"> <img src="image/visual2.jpg" alt="event_image"> </a>
+      </div>
+    </div>
+    <div class="section section-1">
+      <div class="title"> <a href=""> <img src="image/logo_s.jpg" alt="niceweather_logo"> </a> </div>
+      <div class="content"> 
+        <a href="#">
+          <img src="image/fir.jpg" alt="fireextinguisher_image">
+          <p> <span>보편적이지만 <br> 특별한</span> <br>
+              일상과 더 가까워진 소화기
+          </p>
+          </a>
+      </div>
+    </div>
+    <div class="section section-2">
+      <div class="title"> <a href=""> <img src="image/logo_s.jpg" alt="niceweather_logo"> </a> </div>
+      <div class="content"> 
+        <a href="#">
+          <img src="image/camera.jpg" alt="camera_image">
+          <div class="text_box">
+          <p> <strong> NICE WEATHER <br> GOODS </strong> </p>
+          <p class="p2"> <span>간직하고싶은, 찰나의 순간</span> <br>
+              나이스웨더와 함께
+          </p>
+          </div>
+          </a>
+      </div>
+    </div>
+    <div class="section section-3">
+      <div class="title"> <a href=""> <img src="image/logo_s.jpg" alt="niceweather_logo"> </a> </div>
+      <div class="content"> 
+        <div class="inner">
+          <ul>
+            <li> <a href=""> <img src="image/fashion.png" alt="fashion"> </a> </li>
+            <li> <a href=""> <img src="image/lifestyle.png" alt="lifestyle"> </a> </li>
+            <li> <a href=""> <img src="image/best50.png" alt="best50"> </a> </li>
+            <li> <a href=""> <img src="image/food.png" alt="food"> </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section footer">
+      <div class="title"> <a href=""> <img src="image/logo_s.jpg" alt="niceweather_logo"> </a> </div>
+      <div class="content"> 
+        <ul>
+          <li> <a href=""> About </a> </li>
+          <li> <a href=""> Stores </a> </li>
+          <li> <a href=""> FAQ </a> </li>
+          <li> <a href=""> Partnership Inquiry </a> </li>
+          <li> <a href=""> Conyact Us </a> </li>
+          <li> <a href=""> Privacy Policy </a> </li>
+          <li> <a href=""> Term of Service </a> </li>
+        </ul> 
+    
+          <p> (주)나이스웨더  대표 노승훈  서울강남구신사동523-18  help@niceweather.kr  1522-1254  사업자번호 693-81-02003
+            통신판매업 신고번호 2020-서울강남-03642  개인정보보호책임자 김상선 </p>
+          <p> &copy; 2024 NICEWEATHER </p>
+     
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+<script>
+
+class FolderScroll {
+  constructor(wrapper, sticky) {
+    this.wrapper = wrapper
+    this.sticky = sticky
+    this.children = this.sticky.querySelectorAll('.section')
+    this.length = this.children.length
+    this.headerVh = 6
+    this.contentVh = 96 - this.headerVh * this.length
+    this.start = 0
+    this.end = 0
+  }
+
+  init() {
+    this.start = this.wrapper.offsetTop + 100
+    this.end = this.wrapper.offsetTop + this.wrapper.offsetHeight - innerHeight - 100
+
+    this.children.forEach((child, i) => {
+      child.style.bottom = -102 + this.headerVh * (this.length - i) + 'vh'
+      child.querySelector('.title').style.height = this.headerVh + 'vh'
+      child.querySelector('.content').style.height = this.contentVh + 'vh'
+    })
+  }
+
+  animate() {
+    this.children.forEach((child, i) => {
+      const unit = (this.end - this.start) / this.length
+      const s = this.start + unit * i + 100
+      const e = this.start + unit * (i + 1)
+
+      if (scrollY <= s) {
+        child.style.transform = `translate3d(0, 0, 0)`
+      } else if (scrollY >= e) {
+        child.style.transform = `translate3d(0, ${-this.contentVh}%, 0)`
+      } else {
+        child.style.transform = `translate3d(0, ${(scrollY - s) / (unit - 100) * (-this.contentVh)}%, 0)`
+      }
+    })
+  }
+}
+
+const mainContent1 = document.querySelector('.main-content-1')
+const sticky = document.querySelector('.sticky')
+const folderScroll = new FolderScroll(mainContent1, sticky)
+folderScroll.init()
+
+window.addEventListener('resize', () => {
+  folderScroll.init()
+})
+window.addEventListener('scroll', () => {
+  folderScroll.animate()
+})
+
+
+//초기설정
+const menu_btn = document.querySelector(".menu_btn");
+const menu_pop = document.querySelector(".menu_pop");
+const close = document.querySelector(".close");
+
+const body = document.querySelector("body");
+
+
+
+menu_btn.addEventListener("click",function(){ 
+	menu_pop.style.height = "100vh";//메뉴 보이게함
+});
+
+close.addEventListener("click",function(){ 
+	menu_pop.style.height = "0vh";//메뉴 안보이게함
+});
+
+</script>
+
+</body>
+</html>
